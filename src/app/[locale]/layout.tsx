@@ -22,12 +22,12 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: 'sv' | 'en' }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const translations = await getTranslations(locale);
+  const translations = await getTranslations(locale as 'sv' | 'en');
   return (
-    <html>
+    <html lang={locale}>
       <body>
         <Header translations={translations}/>
         <main style={{ flex: 1 }}>
