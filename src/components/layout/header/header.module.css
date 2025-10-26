@@ -1,0 +1,64 @@
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background-color: black;
+  border-bottom: 1px solid var(--highlight);
+  z-index: 100;
+}
+
+.header nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+}
+
+.header nav .chapter {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-weight: var(--font-light);
+  transition: opacity 0.2s ease;
+  font-size: 3.2rem;
+}
+
+.header nav .chapter:hover {
+  text-decoration: underline;  
+  text-decoration-color: var(--highlight);
+  text-decoration-thickness: 2px;
+}
+
+.logo {
+    font-size: 4rem;
+    font-family: var(--font-fancy);
+    text-align: center;
+    color: var(--highlight);
+}
+
+.leftNav {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+}
+
+.rightNav {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+}
+
+.rsvp {
+  border: 1px solid var(--highlight);
+  border-radius: 4px;
+  background-color: transparent;
+  color: inherit;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.rsvp:hover {
+  background-color: var(--highlight);
+  color: black;
+}

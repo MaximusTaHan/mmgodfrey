@@ -1,0 +1,231 @@
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.modalContent {
+  background: black;
+  border-radius: 4px;
+  border: 1px solid var(--highlight);
+  max-width: 50rem;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 3rem 2rem;
+  border-bottom: 1px solid var(--highlight);
+}
+
+.modalHeader h2 {
+  font-family: var(--font-regular);
+  font-size: 3.2rem;
+  font-weight: var(--font-light);
+  color: var(--foreground);
+  margin: 0;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.closeButton:hover {
+  color: var(--foreground);
+  background-color: #f5f5f5;
+}
+
+.rsvpForm {
+  padding: 3rem;
+}
+
+.formGroup {
+  margin-bottom: 2.5rem;
+}
+
+.formGroup label {
+  display: block;
+  font-family: var(--font-primary);
+  font-weight: var(--font-regular);
+  font-size: 2rem;
+  color: var(--foreground);
+  margin-bottom: 0.8rem;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid var(--highlight);
+  border-radius: 0.8rem;
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--highlight);
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.1);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.attendingGroup {
+    display: flex;
+    flex-direction: column;
+
+}
+/* Checkbox and Radio Button Styles */
+.checkboxGroup {
+  display: flex;
+  text-align: center;
+  gap: 1rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  color: var(--foreground);
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  transition: background-color 0.2s ease;
+}
+
+.checkboxLabel:hover {
+  background-color: rgba(225, 29, 72, 0.05);
+}
+
+.checkboxLabel input[type="radio"],
+.checkboxLabel input[type="checkbox"] {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  transform: scale(1.2);
+}
+
+.formActions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  margin-top: 3rem;
+}
+
+.cancelButton,
+.submitButton {
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.8rem;
+  font-family: var(--font-primary);
+  font-weight: var(--font-regular);
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancelButton {
+  background: transparent;
+  border: 1px solid #ddd;
+  color: var(--foreground);
+}
+
+.cancelButton:hover {
+  background-color: var(--foreground);
+  color: black;
+}
+
+.submitButton {
+  background-color: black;
+  border: 1px solid var(--highlight);
+  color: var(--foreground);
+}
+
+.submitButton:hover {
+  background-color: var(--highlight);
+  color: black;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .modalOverlay {
+    padding: 1rem;
+  }
+  
+  .modalHeader,
+  .rsvpForm {
+    padding: 2rem;
+  }
+  
+  .formActions {
+    flex-direction: column;
+  }
+  
+  .cancelButton,
+  .submitButton {
+    width: 100%;
+  }
+}
+
+.notes {
+    font-size: 1.6rem;
+    margin-top: 0.8rem
+}
+
+/* Status Message Styles */
+.statusMessage {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin: 0 3rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.statusMessage.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.statusMessage.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Disabled button states */
+.submitButton:disabled,
+.cancelButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

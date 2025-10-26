@@ -1,0 +1,35 @@
+.container {
+    margin-block: 4rem;
+    position: relative;
+}
+
+.flowers {
+    position: absolute;
+    filter: var(--brightness);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Allows clicks to pass through to content below */
+}
+
+.flowers img {
+    position: absolute;
+    top: 250;
+    left: 90%;
+    transform: translate(-50%, -50%) scale(-1, 1) rotate(10deg);
+    z-index: 1;
+}
+
+.header {
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Ensure all content appears above flowers */
+.container > :not(.flowers) {
+    position: relative;
+    z-index: 2;
+}

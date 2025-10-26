@@ -1,0 +1,16 @@
+{
+  "header": {
+    "start": "Start",
+    "location": "Lokal",
+    "theme": "Tema",
+    "faq": "FAQ",
+    "rsvp": "RSVP"
+  },
+  "main": {
+    "title": "Max & Miku"
+  },
+  "footer": {
+    "contactUs": "Kontakta oss",
+    "toastmasterContact": "Toastmaster kontakt"
+  }
+}

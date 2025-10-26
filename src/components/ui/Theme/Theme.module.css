@@ -1,0 +1,19 @@
+.themeContainer {
+    max-width: 90rem;
+    margin-block: 4rem;
+}
+
+.header {
+    text-align: center;
+}
+
+.bottomContainer {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

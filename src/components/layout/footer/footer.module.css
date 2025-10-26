@@ -1,0 +1,40 @@
+.footer {
+    width: 100%;
+    background-color: #171717;
+    padding-block: 4rem;
+    border-top: 1px solid var(--highlight);
+}
+
+.footer h3 {
+    font-size: 4rem;
+    font-weight: var(--font-light);
+}
+
+.container {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    max-width: 90rem;
+    margin-inline: auto;
+    padding-inline: 4rem;
+}
+.contactWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.contact {
+    line-height: 2.4rem;
+}
+
+.faceCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    align-self: center;
+    font-size: 6.4rem;
+    font-family: var(--font-fancy);
+    color: var(--highlight);
+}

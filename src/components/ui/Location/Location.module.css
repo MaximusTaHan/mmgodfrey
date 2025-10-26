@@ -1,0 +1,50 @@
+.locationContainer {
+    display: flex;
+    max-width: 110rem;
+    margin-block: 8rem;
+    gap: 2.5rem;
+    color: var(--foreground);
+}
+
+.textWrapper {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    text-shadow: var(--text-shadow);
+}
+
+.preHeader {
+    font-family: var(--font-primary);
+    font-size: 4.8rem;
+    align-self: end;
+    z-index: 5
+
+}
+
+.header {
+    font-family: var(--font-fancy);
+    color: var(--highlight);
+    font-size: 6.4rem;
+    font-weight: var(--font-light);
+    text-align: right;
+    grid-row: 2;
+    text-align: end;
+    z-index: 5
+}
+
+.details {
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 5
+}
+
+.flowers {
+    z-index: 1;
+    position: absolute;
+    transform: scale(-1, 1) rotate(-15deg);
+    filter: var(--brightness);
+    right: 0;
+    top: -50;
+}
