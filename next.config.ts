@@ -1,12 +1,32 @@
 import type { NextConfig } from "next";
-import { redirect } from "next/dist/server/api-utils";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   reactCompiler: true,
-};
-
-module.exports = {
+  images: {
+    formats: ['image/webp', 'image/avif'],
+  },
+  async headers() {
+    return [
+      {
+        source: '/fonts/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/images/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ]
+  },
   async redirects() {
     return [
       {
@@ -16,6 +36,6 @@ module.exports = {
       },
     ]
   },
-}
+};
 
 export default nextConfig;
