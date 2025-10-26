@@ -18,6 +18,7 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
         accommodation: '',
         dietary: '',
         brunch: false,
+        honeypot: '', // Spam protection field - should remain empty
     });
 
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -40,6 +41,17 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
                 setSubmitStatus({
                     type: 'error',
                     message: 'Vänligen fyll i alla obligatoriska fält.'
+                });
+                setIsSubmitting(false);
+                return;
+            }
+
+            // Honeypot validation - if filled, it's likely spam
+            if (formData.honeypot.trim() !== '') {
+                console.log('Spam attempt detected via honeypot field');
+                setSubmitStatus({
+                    type: 'error',
+                    message: 'Det uppstod ett fel. Vänligen försök igen.'
                 });
                 setIsSubmitting(false);
                 return;
@@ -72,6 +84,7 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
                         accommodation: '',
                         dietary: '',
                         brunch: false,
+                        honeypot: '',
                     });
                     setSubmitStatus({ type: null, message: '' });
                     onClose();
@@ -111,6 +124,7 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
             accommodation: '',
             dietary: '',
             brunch: false,
+            honeypot: '',
         });
         setSubmitStatus({ type: null, message: '' });
         setIsSubmitting(false);
@@ -204,6 +218,20 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
                             value={formData.email}
                             onChange={handleInputChange}
                             required
+                        />
+                    </div>
+
+                    {/* Honeypot field - hidden from users, should remain empty */}
+                    <div className={styles.honeypot}>
+                        <label htmlFor="website">Lämna detta fält tomt</label>
+                        <input
+                            type="text"
+                            id="website"
+                            name="honeypot"
+                            value={formData.honeypot}
+                            onChange={handleInputChange}
+                            tabIndex={-1}
+                            autoComplete="off"
                         />
                     </div>
 
