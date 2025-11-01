@@ -1,6 +1,5 @@
 .wrapper {
     width: 100%;
-    place-items: center;
     overflow: hidden;
 }
 
@@ -10,6 +9,7 @@
     padding-block: 6rem;
     gap: 1rem;
     color: var(--foreground);
+    margin-inline: auto;
 }
 
 .textWrapper {
