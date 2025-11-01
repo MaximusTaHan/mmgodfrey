@@ -113,22 +113,27 @@ h2 {
   font-family: var(--font-fancy);
   color: var(--highlight);
   text-shadow:  var(--text-shadow);
+}
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
+  h2 {
     font-size: 5rem;
   }
+}
 
-  @media (max-width: 375px) {
+@media (max-width: 375px) {
+  h2 {
     font-size: 4rem;
   }
-
 }
 
 h3 {
   font-size: 4rem;
   font-weight: var(--font-light);
+}
 
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
+  h3 {
     font-size: 3rem;
   }
 }
@@ -145,11 +150,5 @@ a {
 
 .font-primary { font-family: var(--font-primary); }
 .font-secondary { font-family: var(--font-secondary); }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
 
 

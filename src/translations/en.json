@@ -20,8 +20,8 @@
     "preHeader": "Welcome to...",
     "header": "Lunnedet",
     "description1": "Lunnedet is a peninsula between the lakes Alkvetten and Lonnen, northwest of Karlskoga. Read more at:",
-    "description2": "During the wedding we have reserved all available cottages, if you wish to rent one, you can do so via the registration form.",
-    "description3": "Register by June 1st, please respond even if you cannot attend",
+    "description2": "During the wedding we have reserved all available cottages, if you wish to rent one, you can do so via the RSVP form.",
+    "description3": "RSVP by June 1st, please respond even if you cannot attend",
     "descriptionMobile2": "During the wedding we have reserved all available cottages.",
     "descriptionMobile3": "If you wish to rent one, you can do so via the registration form."
   },
@@ -30,7 +30,7 @@
     "paragraph1": "Our wedding theme is glamour deluxe – think Dynasty drama, glitter, diamonds, pearls, and fur. We love over the top but above all, we want everyone to feel fantastic!",
     "paragraph2": "There's no requirement to dress extravagantly, but it's more than welcome if you want to go all in. Dress up as much – or as moderately – as you like.",
     "paragraph3": "Since we are two men and there is no traditional bride, we'd like to emphasize that women are of course welcome to wear white. Do you have an old wedding dress longing to see the dance floor again? Bring it out – it's just fun!",
-    "paragraph4": "So bring out the sequins, the tiara, the tuxedo, the pearls, or your most glamorous creation – we can't wait to see how you interpret our Dynasty world!",
+    "paragraph4": "So bring out the sequins, the diamonds, the tuxedo, the pearls, or your most glamorous creation – we can't wait to see how you interpret our Dynasty world!",
     "paragraph5": "The wedding's color theme is dark teal and burnt orange. To let our bridesmaids and best men shine in their outfits, we kindly ask guests to avoid these two colors."
   },
   "schedule": {
@@ -49,7 +49,7 @@
     "header": "Questions and Answers",
     "q1": {
       "question": "Are children welcome?",
-      "answer": ["Children are warmly welcome during the reception between 2:00–4:00 PM.", "After that, the evening will be completely child-free so all adults can enjoy the party in peace."]
+      "answer": ["Children are warmly welcome during the mingling between 2:00–4:00 PM.", "After that, the evening will be completely child-free so all adults can enjoy the party in peace."]
     },
     "q2": {
       "question": "Can I bring a +1?",
@@ -77,7 +77,7 @@
     },
     "q8": {
       "question": "What food will be served?",
-      "answer": ["Sandwiches will be served at the reception", "A delicious grill buffet for dinner, followed by cake and donuts.", "Later in the evening, a food truck will serve late-night food."]
+      "answer": ["Appetizers will be served at the mingling", "A delicious grill buffet for dinner, followed by cake and donuts.", "Later in the evening, a food truck will serve late-night food."]
     },
     "q9": {
       "question": "Is there special diet food?",
