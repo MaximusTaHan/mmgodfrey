@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 4rem 4rem;
-  margin: 8rem auto;
+  margin: 2rem auto;
   max-width: 80rem;
   border: 1px solid var(--highlight);
 }
@@ -59,6 +59,9 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .countdown {
+    margin-inline: 4rem;
+  }
   .title {
     font-size: 2.8rem;
   }
@@ -74,5 +77,46 @@
   
   .timeContainer {
     gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .countdown {
+    padding: 2rem;
+  }
+  .timeContainer {
+    gap: unset;
+  }
+}
+@media (max-width: 500px) {
+  .timeUnit {
+    min-width: unset;
+  }
+  .number {
+    font-size: 3rem;
+  }
+  .label {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 425px) {
+  .countdown {
+    margin-inline: 2rem;
+  }
+
+  .title {
+    margin-bottom: 1rem;
+  }
+  .timeContainer {
+    gap: unset;
+  }
+}
+
+@media (max-width: 346px) {
+  .countdown {
+    padding: 1rem;
+  }
+  .number {
+    font-size: 2.5rem;
   }
 }

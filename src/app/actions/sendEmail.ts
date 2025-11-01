@@ -98,7 +98,7 @@ Skickad: ${new Date().toLocaleString('sv-SE')}
     
     return {
       success: true,
-      message: 'RSVP skickat framgångsrikt!',
+      message: 'Ditt svar har skickats!',
       messageId: result.messageId,
     };
 

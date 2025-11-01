@@ -62,3 +62,13 @@
   background-color: var(--highlight);
   color: black;
 }
+
+.desktopOnly {
+  display: none;
+}
+
+@media (min-width: 1070px) {
+  .desktopOnly {
+    display: flex;
+  }
+}

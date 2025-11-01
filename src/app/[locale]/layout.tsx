@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../globals.css";
 import Header from "../../components/layout/header/Header";
+import HeaderMobile from "../../components/layout/headerMobile/HeaderMobile";
 import Footer from "@/components/layout/footer/Footer";
 import { getTranslations } from "../translation";
 
@@ -27,12 +28,11 @@ export default async function LocaleLayout({
   const { locale } = await params;
   const translations = await getTranslations(locale as 'sv' | 'en');
   return (
-    <html lang={locale}>
+    <html>
       <body>
         <Header translations={translations}/>
-        <main style={{ flex: 1 }}>
+        <HeaderMobile translations={translations}/>
           {children}
-        </main>
         <Footer translations={translations} />
       </body>
     </html>

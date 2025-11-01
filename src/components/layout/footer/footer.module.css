@@ -6,7 +6,6 @@
 }
 
 .footer h3 {
-    font-size: 4rem;
     font-weight: var(--font-light);
 }
 
@@ -14,11 +13,19 @@
     display: flex;
     align-self: center;
     justify-content: space-between;
-    max-width: 90rem;
+    max-width: 98rem;
     margin-inline: auto;
     padding-inline: 4rem;
+    gap: 2.5rem;
 }
+
 .contactWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.contactWrapper .us,
+.contactWrapper .toast {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -37,4 +44,26 @@
     font-size: 6.4rem;
     font-family: var(--font-fancy);
     color: var(--highlight);
+}
+
+.email {
+    text-decoration: underline;
+    word-break: break-all;
+}
+@media (max-width: 1070px) {
+    .container {
+        max-width: 78rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .faceCard {
+        align-items: center;
+    }
+
+    .contactWrapper {
+    }
 }

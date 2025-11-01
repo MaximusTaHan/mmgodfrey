@@ -9,8 +9,159 @@
   "main": {
     "title": "Max & Miku"
   },
+  "countdown": {
+    "title": "Bröllop - September 26, 2026",
+    "days": "Dagar",
+    "hours": "Timmar",
+    "minutes": "Minuter",
+    "seconds": "Sekunder"
+  },
+  "location": {
+    "preHeader": "Välkommen till...",
+    "header": "Lunnedet",
+    "description1": "Lunedet är en halv-ö mellan sjöarna Alkvetten och Lonnen, norväst om Karlskoga. Läs mer på:",
+    "description2": "Under bröllopet har vi reserverat alla stugor som finns tillgängliga, önskas det hyras så gör man det via anmälningsformuläret.",
+    "description3": "Anmäl dig senast första Juni, svara även om du inte kan kommer",
+    "descriptionMobile2": "Under bröllopet har vi reserverat alla stugor som finns tillgängliga.",
+    "descriptionMobile3": "Önskas det hyras så gör man det via anmälningsformuläret."
+  },
+  "theme": {
+    "header": "Klädkod & Tema",
+    "paragraph1": "Vårt bröllopstema är glamour deluxe – tänk Dynasty-drama, glitter, diamanter, pärlor och päls. Vi älskar over the top men framför allt att alla ska känna sig fantastiska!",
+    "paragraph2": "Det finns inget krav på att klä sig extravagant, men det är mer än välkommet om du vill gå all in. Klä upp dig så mycket – eller så lagom – du själv vill.",
+    "paragraph3": "Eftersom vi är två män och ingen klassisk brud finns, vill vi gärna lyfta att kvinnor självklart är välkomna att bära vitt. Har du en gammal brudklänning som längtar efter att se dansgolvet igen? Ta fram den – det är bara kul!",
+    "paragraph4": "Så ta fram paljetterna, diademet, smokingen, pärlorna eller din mest glamorösa kreation – vi längtar efter att se hur ni tolkar vår Dynasty-värld!",
+    "paragraph5": "Själva bröllopets färgtema är dark teal och bränt orange. För att låta våra brudtärnor och best men glänsa i sina outfits önskar vi att gäster undviker just dessa två färger."
+  },
+  "schedule": {
+    "header": "Bröllopsdagen",
+    "date1": "September 26",
+    "gathering": "Sammling Kl 14:00",
+    "reception": "Motaggning och aktiviteter",
+    "dinner": "Middag",
+    "ceremony": "Vigsel",
+    "party": "Fest",
+    "closing": "Lokalen stänger 01:00",
+    "date2": "September 27",
+    "brunch": "Brunch/Frukost för dem som anmält"
+  },
+  "faq": {
+    "header": "Frågor och svar",
+    "q1": {
+      "question": "Är barn välkomna?",
+      "answer": ["Barn är hjärtligt välkomna under minglet mellan kl. 14–16.", "Efter det blir kvällen helt barnfri så att alla vuxna får njuta av festen i lugn och ro."]
+    },
+    "q2": {
+      "question": "Får jag ta med en +1?",
+      "answer": ["Inbjudan är digital och personlig.", "Vissa är inbjudna som par och andra som singlar, så vi ber er vänligt att komma enligt den inbjudan ni fått.", "Tack för er förståelse!"]
+    },
+    "q3": {
+      "question": "Vilken typ av bröllopsgåvor?",
+      "answer": ["Om ni vill ge en gåva uppskattar vi helst ett bidrag till vår smekmånadsfond till Italien via Swish.", "Eftersom vi reser från Göteborg ber vi vänligt att ni inte tar med blommor eller större presenter – de blir svåra att frakta hem igen."]
+    },
+    "q4": {
+      "question": "Får man ta med egen dryck?",
+      "answer": ["Nej, på grund av lokalens alkoholtillstånd så får ingen egen dryck med tas", "Välkomst dryck och 2 dryckes kuponger kommer delas ut till alla", "Betal bar kommer finnas tillgänglig hela festen"]
+    },
+    "q5": {
+      "question": "Var ligger lokalen?",
+      "answer": ["Bröllopet hålls på: Lunedets Camping", "Lunedet, 691 91 Karlskoga"]
+    },
+    "q6": {
+      "question": "Finns det parkering?",
+      "answer": ["Ja, det finns gott om gratis parkering vid området."]
+    },
+    "q7": {
+      "question": "Finns det boende i närheten?",
+      "answer": ["Ja! Det finns campingstugor precis intill lokalen, reserverade för gäster som reser långväga.", "En bädd kostar 250 kr per person och natt", "Du kan ta med egna lakan och handduk, eller hyra för 250 kr per person (engångsavgift)", "Det finns även campingplatser för er som vill ta med husvagn eller husbil"]
+    },
+    "q8": {
+      "question": "Vad serveras det för mat?",
+      "answer": ["Det bjuds på snittar till minglet", "En härlig grillbuffé till middag, följt av tårta och donuts.", "Senare på kvällen serverar en food truck natta maten."]
+    },
+    "q9": {
+      "question": "Finns det specialkost?",
+      "answer": ["Självklart! Ange gärna eventuella kostpreferenser och allergier när ni OSA:ar, så ser vi till att ni får något gott som passar er."]
+    },
+    "q10": {
+      "question": "Får man ta bilder under vigseln?",
+      "answer": ["Vi ber er vänligt att låta mobilerna vila under vigseln", "Vi har en fantastisk fotograf på plats som fångar alla ögonblick, och vi vill gärna slippa mobiler som sticker upp i bilderna. Efter vigseln får ni självklart fota och filma precis hur mycket ni vill!"]
+    },
+    "q11": {
+      "question": "Kan jag dela bilder på sociala medier?",
+      "answer": ["Ja, absolut! Det kommer finnas QR-koder på borden och skyltar där ni enkelt kan ladda upp era egna bilder till vårt gemensamma bröllopsalbum."]
+    },
+    "q12": {
+      "question": "Kan jag ändra mitt svar senare?",
+      "answer": ["Ja, fram till 1 Juni. Kontakta oss via mejl om ni behöver ändra något – efter det behöver vi låsa allt för våra leverantörer."]
+    },
+    "q13": {
+      "question": "Vad gör jag om jag inte kan komma?",
+      "answer": ["Svara bara att ni inte kan komma när ni OSA:ar. Skulle något dyka upp i sista minuten – skicka gärna ett sms eller mejl till oss så vi vet."]
+    },
+    "q14": {
+      "question": "Är allt inomhus eller utomhus?",
+      "answer": ["Lite av varje! Minglet hålls utomhus (om vädret tillåter), middagen i ladan och festen i stallet.", "Tänk på att bröllopet sker i September, kläder efter väder!"]
+    },
+    "q15": {
+      "question": "Finns det garderob?",
+      "answer": ["Det finns ett litet kapprum där ni kan hänga av er ytterplagg.", "Tänk på att utrymmet är begränsat, så vi rekommenderar att ni lämnar jackan i bilen om möjligt eller att ni kommer tidigt för att säkra en plats."]
+    },
+    "q16": {
+      "question": "Är det brunch dagen efter?",
+      "answer": ["Ja!", "För er som anmält er serveras en mysig brunch mellan kl. 10–12 för 159 kr per person.", "Perfekt sätt att avrunda helgen tillsammans."]
+    }
+  },
   "footer": {
     "contactUs": "Kontakta oss",
     "toastmasterContact": "Toastmaster kontakt"
+  },
+  "rsvp": {
+    "header": {
+      "title": "Du är varmt välkommen att fira vår stora dag med oss!",
+      "subtitle": "Varje enskild person måste fylla i formuläret"
+    },
+    "attendance": {
+      "label": "Kommer du att närvara?",
+      "yesOption": "Ja, jag kommer att delta!",
+      "noOption": "Nej, jag kan tyvärr inte komma"
+    },
+    "fields": {
+      "name": "Namn",
+      "phone": "Telefon",
+      "email": "E-post",
+      "accommodation": "Boende",
+      "dietary": "Särskild kost",
+      "brunch": "Jag deltar på brunch dagen efter",
+      "honeypot": "Lämna detta fält tomt"
+    },
+    "accommodationOptions": {
+      "select": "Välj alternativ",
+      "cabin": "Jag vill boka stuga",
+      "camping": "Jag vill boka campingplats",
+      "none": "Eget boende"
+    },
+    "placeholders": {
+      "dietary": "Allergier, vegetarian, etc."
+    },
+    "notes": {
+      "accommodationDetails": "(Stugorna är redan reserverade, behöver inte bokas på egen hand)",
+      "cabinNote": "Stugor 250kr/säng (Antalet stugor är begränsat och prioriteras för resande gäster. Vid behov kan stuga komma att delas med andra gäster.)",
+      "campingNote": "Camping (Husvagnsplats/campingplats 450kr/natt).",
+      "brunchNote": "Brunchen serveras dagen efter i Lunnedets restaurang för dem som beställt. Brunchen kostar 159kr"
+    },
+    "buttons": {
+      "cancel": "Avbryt",
+      "submit": "Skicka RSVP",
+      "submitting": "Skickar..."
+    },
+    "errors": {
+      "requiredFields": "Vänligen fyll i alla obligatoriska fält.",
+      "sendError": "Det uppstod ett fel. Vänligen försök igen.",
+      "unexpectedError": "Ett oväntat fel uppstod. Vänligen försök igen."
+    },
+    "success": {
+      "message": "Tack för din anmälan!"
+    }
   }
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import styles from './header.module.css';
+import styles from './headerMobile.module.css';
 import RSVPModal from '../../forms/RSVPModal/RSVPModal';
 
 interface Props {
@@ -64,8 +64,9 @@ interface Props {
     };
 }
 
-export default function Header({ translations }: Props ) {
+export default function HeaderMobile({ translations }: Props ) {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const openRSVPModal = () => {
         console.log('RSVP modal opened!'); // Debug log
@@ -127,27 +128,33 @@ export default function Header({ translations }: Props ) {
     };
 
     return (
-        <header className={`${styles.header} ${styles.desktopOnly}`}>
-            <nav>
-                <div className={styles.leftNav}>
+        <header className={styles.header}>
+            <div className={styles.logo}>
+                M&M
+            </div>
+            <button className={`${styles.menuButton} ${isMenuOpen ? styles.buttonOpen : ''}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>☰</button>
+
+            {isMenuOpen && (
+                <>
+                    <div className={styles.overlay} onClick={() => setIsMenuOpen(false)}></div>
+                    <nav className={styles.sideMenu}>
                     <div 
                         className={styles.chapter} 
-                        onClick={scrollToTop}
-                        style={{ cursor: 'pointer' }}
+                        onClick={() => {
+                            scrollToTop();
+                            setIsMenuOpen(false);
+                        }}
                         role="button"
                         tabIndex={0}
                     >
                         {translations.header.start}
                     </div>
-                </div>
-                <div className={styles.logo}>
-                    M&M
-                </div>
-                <div className={styles.rightNav}>
                     <div 
                         className={styles.chapter}
-                        onClick={scrollToLocation}
-                        style={{ cursor: 'pointer' }}
+                        onClick={() => {
+                            scrollToLocation();
+                            setIsMenuOpen(false);
+                        }}
                         role="button"
                         tabIndex={0}
                     >
@@ -155,8 +162,10 @@ export default function Header({ translations }: Props ) {
                     </div>
                     <div 
                         className={styles.chapter}
-                        onClick={scrollToTheme}
-                        style={{ cursor: 'pointer' }}
+                        onClick={() => {
+                            scrollToTheme();
+                            setIsMenuOpen(false);
+                        }}
                         role="button"
                         tabIndex={0}
                     >
@@ -164,8 +173,10 @@ export default function Header({ translations }: Props ) {
                     </div>
                     <div 
                         className={styles.chapter}
-                        onClick={scrollToFAQ}
-                        style={{ cursor: 'pointer' }}
+                        onClick={() => {
+                            scrollToFAQ();
+                            setIsMenuOpen(false);
+                        }}
                         role="button"
                         tabIndex={0}
                     >
@@ -173,15 +184,18 @@ export default function Header({ translations }: Props ) {
                     </div>
                     <div 
                         className={`${styles.chapter} ${styles.rsvp}`}
-                        onClick={openRSVPModal}
-                        style={{ cursor: 'pointer' }}
+                        onClick={() => {
+                            openRSVPModal();
+                            setIsMenuOpen(false);
+                        }}
                         role="button"
                         tabIndex={0}
                     >
                         {translations.header.rsvp}
                     </div>
-                </div>
-            </nav>
+                </nav>
+                </>
+            )}
 
             <RSVPModal isOpen={isModalOpen} onClose={closeModal} translations={translations} />
         </header>

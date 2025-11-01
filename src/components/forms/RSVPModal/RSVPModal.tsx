@@ -7,9 +7,59 @@ import { sendEmail } from '../../../app/actions/sendEmail';
 interface RSVPModalProps {
     isOpen: boolean;
     onClose: () => void;
+    translations: {
+        rsvp: {
+            header: {
+                title: string;
+                subtitle: string;
+            };
+            attendance: {
+                label: string;
+                yesOption: string;
+                noOption: string;
+            };
+            fields: {
+                name: string;
+                phone: string;
+                email: string;
+                accommodation: string;
+                dietary: string;
+                brunch: string;
+                honeypot: string;
+            };
+            accommodationOptions: {
+                select: string;
+                cabin: string;
+                camping: string;
+                none: string;
+            };
+            placeholders: {
+                dietary: string;
+            };
+            notes: {
+                accommodationDetails: string;
+                cabinNote: string;
+                campingNote: string;
+                brunchNote: string;
+            };
+            buttons: {
+                cancel: string;
+                submit: string;
+                submitting: string;
+            };
+            errors: {
+                requiredFields: string;
+                sendError: string;
+                unexpectedError: string;
+            };
+            success: {
+                message: string;
+            };
+        };
+    };
 }
 
-export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
+export default function RSVPModal({ isOpen, onClose, translations }: RSVPModalProps) {
     const [formData, setFormData] = useState({
         attending: '', // 'yes' or 'no'
         name: '',
@@ -40,7 +90,7 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
             if (!formData.name.trim() || !formData.phone.trim() || !formData.email.trim() || !formData.attending) {
                 setSubmitStatus({
                     type: 'error',
-                    message: 'Vänligen fyll i alla obligatoriska fält.'
+                    message: translations.rsvp.errors.requiredFields
                 });
                 setIsSubmitting(false);
                 return;
@@ -51,7 +101,7 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
                 console.log('Spam attempt detected via honeypot field');
                 setSubmitStatus({
                     type: 'error',
-                    message: 'Det uppstod ett fel. Vänligen försök igen.'
+                    message: translations.rsvp.errors.sendError
                 });
                 setIsSubmitting(false);
                 return;
@@ -71,35 +121,19 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
             if (result.success) {
                 setSubmitStatus({
                     type: 'success',
-                    message: result.message
+                    message: translations.rsvp.success.message
                 });
-                
-                // Reset form after successful submission
-                setTimeout(() => {
-                    setFormData({
-                        attending: '',
-                        name: '',
-                        phone: '',
-                        email: '',
-                        accommodation: '',
-                        dietary: '',
-                        brunch: false,
-                        honeypot: '',
-                    });
-                    setSubmitStatus({ type: null, message: '' });
-                    onClose();
-                }, 2000); // Close modal after 2 seconds to show success message
             } else {
                 setSubmitStatus({
                     type: 'error',
-                    message: result.message
+                    message: translations.rsvp.errors.sendError
                 });
             }
         } catch (error) {
             console.error('Error submitting RSVP:', error);
             setSubmitStatus({
                 type: 'error',
-                message: 'Ett oväntat fel uppstod. Vänligen försök igen.'
+                message: translations.rsvp.errors.unexpectedError
             });
         } finally {
             setIsSubmitting(false);
@@ -137,25 +171,19 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
         <div className={styles.modalOverlay} onClick={handleClose}>
             <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
                 <div className={styles.modalHeader}>
-                    <h2>Du är varmt välkommen att fira vår stora dag med oss!</h2>
+                    <h2>{translations.rsvp.header.title}</h2>
+                    <p>{translations.rsvp.header.subtitle}</p>
                 </div>
-
-                {/* Status Message */}
-                {submitStatus.type && (
-                    <div className={`${styles.statusMessage} ${styles[submitStatus.type]}`}>
-                        {submitStatus.message}
-                    </div>
-                )}
 
                 <form className={styles.rsvpForm} onSubmit={handleSubmit}>
                     {/* Attendance Selection */}
                     <div className={styles.formGroup}>
-                        <label>Kommer du att delta? *</label>
+                        <span className={styles.attendanceLabel}>{translations.rsvp.attendance.label} *</span>
                         <div className={styles.checkboxGroup}>
                             <div className={styles.attendingGroup}>
 
                                 <label htmlFor="attending" className={styles.checkboxLabel}>
-                                    Ja, jag kommer att delta!
+                                    {translations.rsvp.attendance.yesOption}
                                 </label>
                                 <input
                                     id="attending"
@@ -170,7 +198,7 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
                             <div className={styles.attendingGroup}>
 
                                 <label htmlFor="notAttending" className={styles.checkboxLabel}>
-                                    Nej, jag kan tyvärr inte komma
+                                    {translations.rsvp.attendance.noOption}
                                 </label>
                                 <input
                                     id="notAttending"
@@ -188,7 +216,7 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
 
                     {/* Common Fields for Both */}
                     <div className={styles.formGroup}>
-                        <label htmlFor="name">Namn *</label>
+                        <label htmlFor="name">{translations.rsvp.fields.name} *</label>
                         <input
                             type="text"
                             id="name"
@@ -199,7 +227,7 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
                         />
                     </div>
                     <div className={styles.formGroup}>
-                        <label htmlFor="phone">Telefon *</label>
+                        <label htmlFor="phone">{translations.rsvp.fields.phone} *</label>
                         <input
                             type="tel"
                             id="phone"
@@ -210,7 +238,7 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
                         />
                     </div>
                     <div className={styles.formGroup}>
-                        <label htmlFor="email">E-post *</label>
+                        <label htmlFor="email">{translations.rsvp.fields.email} *</label>
                         <input
                             type="email"
                             id="email"
@@ -223,7 +251,7 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
 
                     {/* Honeypot field - hidden from users, should remain empty */}
                     <div className={styles.honeypot}>
-                        <label htmlFor="website">Lämna detta fält tomt</label>
+                        <label htmlFor="website">{translations.rsvp.fields.honeypot}</label>
                         <input
                             type="text"
                             id="website"
@@ -239,42 +267,42 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
                     {formData.attending === 'yes' && (
                         <>
                             <div className={styles.formGroup}>
-                                <label htmlFor="accommodation">Boende</label>
+                                <label htmlFor="accommodation">{translations.rsvp.fields.accommodation}</label>
+                                <span className={styles.accommodationDetails}> {translations.rsvp.notes.accommodationDetails}</span>
                                 <select
                                     id="accommodation"
                                     name="accommodation"
                                     value={formData.accommodation}
                                     onChange={handleInputChange}
                                 >
-                                    <option value="">Välj alternativ</option>
-                                    <option value="cabin">Jag vill hyra stuga</option>
-                                    <option value="hotel">Jag bor på hotell</option>
-                                    <option value="other">Annat boende</option>
-                                    <option value="none">Behöver inget boende</option>
+                                    <option value="">{translations.rsvp.accommodationOptions.select}</option>
+                                    <option value="cabin">{translations.rsvp.accommodationOptions.cabin}</option>
+                                    <option value="camping">{translations.rsvp.accommodationOptions.camping}</option>
+                                    <option value="none">{translations.rsvp.accommodationOptions.none}</option>
                                 </select>
-                                <p className={styles.notes}>Camping (Husvagnsplats/campingplats 450kr/natt).</p>
-                                <p className={styles.notes}>Stugor 250kr/säng (På grund av begränsad mängd prioriteras till resande besökare)</p>
+                                <p className={styles.notes}>{translations.rsvp.notes.cabinNote}</p>
+                                <p className={styles.notes}>{translations.rsvp.notes.campingNote}</p>
                             </div>
 
                             <div className={styles.formGroup}>
-                                <label className={styles.checkboxLabel}>
+                                <label className={`${styles.checkboxLabel} ${styles.brunchLabel}`}>
                                     <input
                                         type="checkbox"
                                         name="brunch"
                                         checked={formData.brunch}
                                         onChange={(e) => setFormData(prev => ({ ...prev, brunch: e.target.checked }))}
                                     />
-                                    Jag deltar på brunch dagen efter
+                                    {translations.rsvp.fields.brunch}
                                 </label>
-                                <p className={styles.notes}>Brunchen serveras klockan 10:00 i campingens restaurang för dem som beställt. Brunchen kostar 150kr</p>
+                                <p className={styles.notes}>{translations.rsvp.notes.brunchNote}</p>
                             </div>
 
                             <div className={styles.formGroup}>
-                                <label htmlFor="dietary">Särskilda kostvaner</label>
+                                <label htmlFor="dietary">{translations.rsvp.fields.dietary}</label>
                                 <textarea
                                     id="dietary"
                                     name="dietary"
-                                    placeholder="Allergier, vegetarian, etc."
+                                    placeholder={translations.rsvp.placeholders.dietary}
                                     rows={3}
                                     value={formData.dietary}
                                     onChange={handleInputChange}
@@ -282,6 +310,22 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
                             </div>
                         </>
                     )}
+                    
+                    {/* Loading Indicator */}
+                    {isSubmitting && (
+                        <div className={styles.loadingIndicator}>
+                            <div className={styles.spinner}></div>
+                            <p>{translations.rsvp.buttons.submitting}</p>
+                        </div>
+                    )}
+
+                    {/* Status Message */}
+                    {submitStatus.type && !isSubmitting && (
+                        <div className={`${styles.statusMessage} ${styles[submitStatus.type]}`}>
+                            {submitStatus.message}
+                        </div>
+                    )}
+
                     <div className={styles.formActions}>
                         <button 
                             type="button" 
@@ -289,14 +333,14 @@ export default function RSVPModal({ isOpen, onClose }: RSVPModalProps) {
                             onClick={handleClose}
                             disabled={isSubmitting}
                         >
-                            Avbryt
+                            {translations.rsvp.buttons.cancel}
                         </button>
                         <button 
                             type="submit" 
                             className={styles.submitButton}
                             disabled={isSubmitting}
                         >
-                            {isSubmitting ? 'Skickar...' : 'Skicka RSVP'}
+                            {isSubmitting ? translations.rsvp.buttons.submitting : translations.rsvp.buttons.submit}
                         </button>
                     </div>
                 </form>

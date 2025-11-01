@@ -61,6 +61,9 @@
 
   --brightness: brightness(40%);
   --text-shadow: 2px 4px 1px black;
+
+  /* Screen sizes */
+  --screen-medium: 1070px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -73,10 +76,6 @@
 html {
   font-size: 10px; /* Makes 1rem = 10px */
   box-sizing: border-box;
-}
-
-html,
-body {
 }
 
 body {
@@ -94,7 +93,7 @@ body {
 
 main {
   font-size: 2rem;
-  justify-items: center;
+  width: 100%;
 }
 
 footer {
@@ -114,11 +113,24 @@ h2 {
   font-family: var(--font-fancy);
   color: var(--highlight);
   text-shadow:  var(--text-shadow);
+
+  @media (max-width: 600px) {
+    font-size: 5rem;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 4rem;
+  }
+
 }
 
 h3 {
   font-size: 4rem;
   font-weight: var(--font-light);
+
+  @media (max-width: 600px) {
+    font-size: 3rem;
+  }
 }
 
 a {
@@ -139,3 +151,5 @@ a {
     color-scheme: dark;
   }
 }
+
+

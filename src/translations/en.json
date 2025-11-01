@@ -9,8 +9,159 @@
   "main": {
     "title": "Max & Miku"
   },
+  "countdown": {
+    "title": "Wedding - September 26, 2026",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
+  },
+  "location": {
+    "preHeader": "Welcome to...",
+    "header": "Lunnedet",
+    "description1": "Lunnedet is a peninsula between the lakes Alkvetten and Lonnen, northwest of Karlskoga. Read more at:",
+    "description2": "During the wedding we have reserved all available cottages, if you wish to rent one, you can do so via the registration form.",
+    "description3": "Register by June 1st, please respond even if you cannot attend",
+    "descriptionMobile2": "During the wedding we have reserved all available cottages.",
+    "descriptionMobile3": "If you wish to rent one, you can do so via the registration form."
+  },
+  "theme": {
+    "header": "Dress Code & Theme",
+    "paragraph1": "Our wedding theme is glamour deluxe – think Dynasty drama, glitter, diamonds, pearls, and fur. We love over the top but above all, we want everyone to feel fantastic!",
+    "paragraph2": "There's no requirement to dress extravagantly, but it's more than welcome if you want to go all in. Dress up as much – or as moderately – as you like.",
+    "paragraph3": "Since we are two men and there is no traditional bride, we'd like to emphasize that women are of course welcome to wear white. Do you have an old wedding dress longing to see the dance floor again? Bring it out – it's just fun!",
+    "paragraph4": "So bring out the sequins, the tiara, the tuxedo, the pearls, or your most glamorous creation – we can't wait to see how you interpret our Dynasty world!",
+    "paragraph5": "The wedding's color theme is dark teal and burnt orange. To let our bridesmaids and best men shine in their outfits, we kindly ask guests to avoid these two colors."
+  },
+  "schedule": {
+    "header": "Wedding Day",
+    "date1": "September 26",
+    "gathering": "Gathering at 2:00 PM",
+    "reception": "Reception and activities",
+    "dinner": "Dinner",
+    "ceremony": "Ceremony",
+    "party": "Party",
+    "closing": "Venue closes at 1:00 AM",
+    "date2": "September 27",
+    "brunch": "Brunch/Breakfast for those who registered"
+  },
+  "faq": {
+    "header": "Questions and Answers",
+    "q1": {
+      "question": "Are children welcome?",
+      "answer": ["Children are warmly welcome during the reception between 2:00–4:00 PM.", "After that, the evening will be completely child-free so all adults can enjoy the party in peace."]
+    },
+    "q2": {
+      "question": "Can I bring a +1?",
+      "answer": ["The invitation is digital and personal.", "Some are invited as couples and others as singles, so we kindly ask you to come according to the invitation you received.", "Thank you for your understanding!"]
+    },
+    "q3": {
+      "question": "What kind of wedding gifts?",
+      "answer": ["If you wish to give a gift, we would most appreciate a contribution to our honeymoon fund to Italy via Swish.", "Since we're traveling from Gothenburg, we kindly ask that you don't bring flowers or larger gifts – they're difficult to transport home."]
+    },
+    "q4": {
+      "question": "Can you bring your own drinks?",
+      "answer": ["No, due to the venue's alcohol license, no outside drinks are allowed", "Welcome drinks and 2 drink vouchers will be distributed to everyone", "A cash bar will be available throughout the party"]
+    },
+    "q5": {
+      "question": "Where is the venue?",
+      "answer": ["The wedding is held at: Lunedets Camping", "Lunedet, 691 91 Karlskoga"]
+    },
+    "q6": {
+      "question": "Is there parking?",
+      "answer": ["Yes, there is plenty of free parking at the area."]
+    },
+    "q7": {
+      "question": "Is there accommodation nearby?",
+      "answer": ["Yes! There are camping cabins right next to the venue, reserved for guests traveling from afar.", "A bed costs 250 SEK per person per night", "You can bring your own sheets and towel, or rent them for 250 SEK per person (one-time fee)", "There are also camping spots for those who want to bring a caravan or motorhome"]
+    },
+    "q8": {
+      "question": "What food will be served?",
+      "answer": ["Sandwiches will be served at the reception", "A delicious grill buffet for dinner, followed by cake and donuts.", "Later in the evening, a food truck will serve late-night food."]
+    },
+    "q9": {
+      "question": "Is there special diet food?",
+      "answer": ["Of course! Please indicate any dietary preferences and allergies when you RSVP, and we'll make sure you get something delicious that suits you."]
+    },
+    "q10": {
+      "question": "Can I take pictures during the ceremony?",
+      "answer": ["We kindly ask you to let your phones rest during the ceremony", "We have a fantastic photographer on site who captures all the moments, and we'd prefer not to have phones sticking up in the pictures. After the ceremony, you're of course welcome to photograph and film as much as you like!"]
+    },
+    "q11": {
+      "question": "Can I share pictures on social media?",
+      "answer": ["Yes, absolutely! There will be QR codes on the tables and signs where you can easily upload your own pictures to our shared wedding album."]
+    },
+    "q12": {
+      "question": "Can I change my answer later?",
+      "answer": ["Yes, until June 1st. Contact us via email if you need to change anything – after that we need to lock everything for our suppliers."]
+    },
+    "q13": {
+      "question": "What do I do if I can't come?",
+      "answer": ["Just respond that you can't come when you RSVP. If something comes up at the last minute – please send us a text or email so we know."]
+    },
+    "q14": {
+      "question": "Is everything indoors or outdoors?",
+      "answer": ["A bit of both! The reception is held outdoors (weather permitting), dinner in the barn, and the party in the stable.", "Keep in mind that the wedding takes place in September, dress for the weather!"]
+    },
+    "q15": {
+      "question": "Is there a coat check?",
+      "answer": ["There is a small cloakroom where you can hang your outerwear.", "Keep in mind that space is limited, so we recommend leaving your jacket in the car if possible or arriving early to secure a spot."]
+    },
+    "q16": {
+      "question": "Is there brunch the day after?",
+      "answer": ["Yes!", "For those who have registered, a cozy brunch is served between 10:00 AM–12:00 PM for 159 SEK per person.", "A perfect way to wrap up the weekend together."]
+    }
+  },
   "footer": {
     "contactUs": "Contact Us",
     "toastmasterContact": "Toastmaster Contact"
+  },
+  "rsvp": {
+    "header": {
+      "title": "You are warmly welcome to celebrate our big day with us!",
+      "subtitle": "Each individual person must fill out the form"
+    },
+    "attendance": {
+      "label": "Will you be attending?",
+      "yesOption": "Yes, I will attend!",
+      "noOption": "No, I unfortunately cannot come"
+    },
+    "fields": {
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "accommodation": "Accommodation",
+      "dietary": "Special dietary requirements",
+      "brunch": "I will attend brunch the day after",
+      "honeypot": "Leave this field empty"
+    },
+    "accommodationOptions": {
+      "select": "Select option",
+      "cabin": "I want to book a cabin",
+      "camping": "I want to book a camping spot",
+      "none": "Own accommodation"
+    },
+    "placeholders": {
+      "dietary": "Allergies, vegetarian, etc."
+    },
+    "notes": {
+      "accommodationDetails": "(The cabins are already reserved, no need to book separately)",
+      "cabinNote": "Cabins 250 SEK/bed (The number of cabins is limited and prioritized for traveling guests. If needed, cabins may be shared with other guests.)",
+      "campingNote": "Camping (Caravan/camping spot 450 SEK/night).",
+      "brunchNote": "Brunch is served the day after at Lunnedet's restaurant for those who ordered. Brunch costs 159 SEK"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "submit": "Send RSVP",
+      "submitting": "Sending..."
+    },
+    "errors": {
+      "requiredFields": "Please fill in all required fields.",
+      "sendError": "An error occurred. Please try again.",
+      "unexpectedError": "An unexpected error occurred. Please try again."
+    },
+    "success": {
+      "message": "Thank you for your RSVP!"
+    }
   }
 }

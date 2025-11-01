@@ -1,10 +1,14 @@
+.wrapper {
+  margin-inline: auto;
+  max-width: 134.4rem;
+}
+
 .scheduleContainer {
-  background-image: url('/images/Schedule.png');
+  background-image: url('/images/scheduleDarker.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 74.3rem; /* Adjust as needed */
-  min-width: 134.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,10 +16,71 @@
   position: relative;
   gap: 1.5rem;
   text-shadow: var(--text-shadow);
-  margin-block: 8rem;
+  margin-top: 8rem;
+  border: 1px solid var(--highlight);
 
   p {
     font-size: 3rem;
     font-weight: var(--font-light);
+    text-align: center;
+  }
+}
+
+@media (max-width: 1430px) {
+  .wrapper {
+    max-width: 100rem;
+  }
+}
+
+@media (max-width: 1070px) {
+  .wrapper {
+    margin-inline: 2rem;
+  }
+  .scheduleContainer {
+    min-width: 80rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .wrapper {
+    padding-inline: 2rem;
+  }
+  .scheduleContainer {
+    min-width:unset;
+    width:100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .scheduleContainer {
+    background-position: 75%;
+  }
+}
+
+@media (max-width: 545px) {
+  .scheduleContainer {
+    background-position: 70%;
+  }
+}
+
+@media (max-width: 425px) {
+  .scheduleContainer {
+    background-position: 65%;
+  }
+}
+
+@media (max-width: 375px) {
+  .scheduleContainer {
+    background-position: 65%;
+  }
+}
+
+@media (max-width: 425px) {
+  .wrapper {
+    padding-inline: 0;
+  }
+
+  .scheduleContainer p {
+    font-size: 2rem;
   }
 }

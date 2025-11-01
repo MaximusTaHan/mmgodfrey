@@ -1,8 +1,14 @@
+.wrapper {
+    width: 100%;
+    place-items: center;
+    overflow: hidden;
+}
+
 .locationContainer {
     display: flex;
     max-width: 110rem;
-    margin-block: 8rem;
-    gap: 2.5rem;
+    padding-block: 6rem;
+    gap: 1rem;
     color: var(--foreground);
 }
 
@@ -40,6 +46,15 @@
     z-index: 5
 }
 
+.detailsMobile {
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 5;
+    display: none;
+}
+
 .flowers {
     z-index: 1;
     position: absolute;
@@ -47,4 +62,104 @@
     filter: var(--brightness);
     right: 0;
     top: -50;
+}
+
+@media (max-width: 1250px) {
+    .locationContainer {
+        max-width: 700px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .locationContainer > img {
+        z-index: 10;
+        width: 700px;
+        height: 427px;
+    }
+
+    .textWrapper {
+        width: 700px;
+        align-items: center;
+        grid-template-rows: 1fr auto;
+        margin-bottom: 6rem;
+    }
+
+    .preHeader {
+        padding-left: 100px;
+    }
+    .header {
+        padding-right: 120px;
+    }
+
+    .flowers {
+        width: 300px;
+        height: 300px;
+        right: 190;
+        transform: scale(-1, 1) rotate(-35deg);
+    }
+
+    .details {
+        display: none;
+    }
+    .detailsMobile {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .locationContainer {
+        margin-inline: 4rem;
+    }
+
+    .locationContainer > img {
+        z-index: 10;
+        width: 100%;
+        height: auto;
+    }
+
+    .textWrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 658px) {
+    .preHeader {
+        padding-left: 60px;
+    }
+    .header {
+        padding-right: 90px;
+    }
+}
+
+@media (max-width: 583px) {
+    .preHeader {
+        padding-left: 0;
+    }
+    .header {
+        padding-right: 0;
+    }
+
+    .locationContainer img {
+        right: 80px;
+    }
+}
+
+@media (max-width: 425px) {
+    .locationContainer {
+        margin-inline: 2rem;
+    }
+    .locationContainer img {
+        right: 0px;
+    }
+    .preHeader {
+        font-size: 3rem;
+    }
+    .header {
+        font-size: 5rem;
+    }
+}
+@media (max-width: 325px) {
+    .locationContainer img {
+        right: -35px;
+    }
 }

@@ -1,6 +1,15 @@
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+    place-items: center;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+}
+
 .container {
     margin-block: 4rem;
     position: relative;
+    width: 90rem;
 }
 
 .flowers {
@@ -32,4 +41,29 @@
 .container > :not(.flowers) {
     position: relative;
     z-index: 2;
+}
+
+@media (max-width: 1070px) {
+    .container {
+        width: 70rem;
+    }
+
+    .flowers {
+        left: -70;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding-inline: 4rem;
+    }
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+    .wrapper {
+        padding-inline: 2rem;
+    }
 }

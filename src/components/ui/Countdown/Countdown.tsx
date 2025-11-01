@@ -10,7 +10,19 @@ interface TimeLeft {
   seconds: number;
 }
 
-const Countdown = () => {
+interface Props {
+  translations: {
+    countdown: {
+      title: string;
+      days: string;
+      hours: string;
+      minutes: string;
+      seconds: string;
+    };
+  };
+}
+
+const Countdown = ({ translations }: Props) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -49,26 +61,26 @@ const Countdown = () => {
 
   return (
     <div className={styles.countdown}>
-      <h2 className={styles.title}>Bröllop - September 26, 2026</h2>
+      <h2 className={styles.title}>{translations.countdown.title}</h2>
       <div className={styles.timeContainer}>
         <div className={styles.timeUnit}>
           <span className={styles.number}>{timeLeft.days}</span>
-          <span className={styles.label}>Dagar</span>
+          <span className={styles.label}>{translations.countdown.days}</span>
         </div>
         <div className={styles.separator}>:</div>
         <div className={styles.timeUnit}>
           <span className={styles.number}>{timeLeft.hours.toString().padStart(2, '0')}</span>
-          <span className={styles.label}>Timmar</span>
+          <span className={styles.label}>{translations.countdown.hours}</span>
         </div>
         <div className={styles.separator}>:</div>
         <div className={styles.timeUnit}>
           <span className={styles.number}>{timeLeft.minutes.toString().padStart(2, '0')}</span>
-          <span className={styles.label}>Minuter</span>
+          <span className={styles.label}>{translations.countdown.minutes}</span>
         </div>
         <div className={styles.separator}>:</div>
         <div className={styles.timeUnit}>
           <span className={styles.number}>{timeLeft.seconds.toString().padStart(2, '0')}</span>
-          <span className={styles.label}>Sekunder</span>
+          <span className={styles.label}>{translations.countdown.seconds}</span>
         </div>
       </div>
     </div>
